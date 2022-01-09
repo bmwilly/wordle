@@ -40,7 +40,7 @@ def play():
     winner = False
 
     for _ in range(6):
-        guess = input('Your guess')
+        guess = input('Your guess:')
         guess_letters = list(guess)
 
         if len(guess_letters) != 5:
