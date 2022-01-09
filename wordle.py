@@ -1,11 +1,13 @@
+from pathlib import Path
+
 import emoji
 from nltk import FreqDist
 from nltk.corpus import brown
 import numpy as np
 
 
-freqs = FreqDist(w.lower() for w in brown.words() if len(w) == 5)
-word_list = list(w for w, _ in freqs.most_common(1000))
+with Path("words.txt").open("r") as f:
+    word_list = [w.strip() for w in f.readlines()]
 
 
 def get_todays_letters():
