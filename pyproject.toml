@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "wordle"
+version = "0.1.0"
+description = "Wordle App"
+authors = ["Brandon Williams <bwilliams9@pm.me>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+marimo = "^0.2.13"
+nltk = "^3.8.1"
+numpy = "^1.26.4"
+streamlit = "^1.31.1"
+emoji = "^2.10.1"
+watchdog = "^4.0.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+ipdb = "^0.13.13"
+mypy = "^1.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
