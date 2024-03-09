@@ -10,10 +10,10 @@ python = "^3.11"
 marimo = "^0.2.13"
 nltk = "^3.8.1"
 numpy = "^1.26.4"
-streamlit = "^1.31.1"
 emoji = "^2.10.1"
 watchdog = "^4.0.0"
 ipykernel = "^6.29.3"
+dash = "^2.16.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.2.0"

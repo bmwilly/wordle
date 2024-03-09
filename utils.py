@@ -32,8 +32,3 @@ def compare_guess(todays_letters: list[str], guess_letters: list[str]) -> list[s
             raise ValueError("Something went wrong")
 
     return res
-
-
-def print_results(results: list[list[str]]):
-    for res in results:
-        print(res)
