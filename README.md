@@ -13,5 +13,5 @@ poetry install
 ## Run
 
 ```shell
-poetry run streamlit run app.py
+poetry run python app.py
 ```
