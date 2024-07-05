@@ -16,8 +16,16 @@ def get_todays_letters() -> list[str]:
 def compare_guess(todays_letters: list[str], guess_letters: list[str]) -> list[str]:
     assert len(todays_letters) == len(guess_letters) == 5, "Both words must be 5 letters long"
 
-    greens = [i for i, (l1, l2) in enumerate(zip(todays_letters, guess_letters)) if l1 == l2]
-    yellows = [i for i, l in enumerate(guess_letters) if l in todays_letters and i not in greens]
+    greens = [
+        i
+        for i, (today_letter, guess_letter) in enumerate(zip(todays_letters, guess_letters))
+        if today_letter == guess_letter
+    ]
+    yellows = [
+        i
+        for i, guess_letter in enumerate(guess_letters)
+        if guess_letter in todays_letters and i not in greens
+    ]
     greys = [i for i, _ in enumerate(guess_letters) if i not in greens and i not in yellows]
 
     res = []

@@ -49,7 +49,9 @@ def update_store(n_clicks, value, data):
 
 
 @app.callback(
-    Output("guess-output", "children"), Output("end-output", "children"), Input("store", "data")
+    Output("guess-output", "children"),
+    Output("end-output", "children"),
+    Input("store", "data"),
 )
 def update_output(data):
     if data is None:
